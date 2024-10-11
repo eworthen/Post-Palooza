@@ -1,0 +1,16 @@
+{
+  "name": "keenado-post-palooza-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+     "build:css": "npx tailwindcss -i ./app/assets/css/style.css -o ./app/assets/css/output.css --minify",
+      "watch": "npx tailwindcss -i ./app/assets/css/style.css -o ./app/assets/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}
