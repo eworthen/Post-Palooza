@@ -22,6 +22,27 @@ echo '<div id="card-preview" class="w-[360px] bg-white border border-gray-200 sh
     echo '<div class="p-4 mt-auto">';
     echo '<div class="bg-blue-600 text-white text-xs font-semibold py-2 px-4 rounded hover:bg-green-600 inline-block">VIEW POST &rsaquo;</div>';
     echo '</div>';
+
+    // Post Author and Date with separator and icons
+    echo '<div class="border-t border-gray-300 mt-2 py-2 px-4 text-xs text-gray-600 flex justify-between items-center">';
+
+    // Author with icon
+    echo '<span class="flex items-center">';
+    echo '<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">';
+    echo '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A10.97 10.97 0 0112 15c2.733 0 5.254 1.04 7.121 2.804M12 12a4 4 0 100-8 4 4 0 000 8z" />';
+    echo '</svg>';
+    echo '<span class="font-semibold text-gray-800">Author</span>';
+    echo '</span>';
+
+    // Date with icon
+    echo '<span class="flex items-center">';
+    echo '<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">';
+    echo '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-6 8h6m-6 4h6M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />';
+    echo '</svg>';
+    echo '<span class="font-semibold text-gray-800">' . date('F j, Y') . '</span>';
+    echo '</span>';
+
+    echo '</div>';
 echo '</div>'; // End of the first card container
 
 // Control Section (Column 2) - Form for customization with rows of elements
