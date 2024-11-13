@@ -47,7 +47,7 @@ try {
             }
 
             // Display Post Title at the top with larger font size and left padding
-            echo '<h2 class="post-title text-2xl font-bold ' . esc_attr($atts['title_font_family']) . '" title="' . get_the_title() . '" style="color:' . esc_attr($atts['title_font_color']) . '; padding-left: 0.5rem;">' . esc_html(wp_trim_words(get_the_title(), 20, '...')) . '</h2>';
+            echo '<h2 class="post-title text-2xl font-bold ' . esc_attr($atts['title_font_family']) . '" title="' . get_the_title() . '" style="color:' . esc_attr($atts['title_font_color']) . '; padding-left: 0.5rem;">' . esc_html(wp_trim_words(get_the_title(), 14, '...')) . '</h2>';
 
             // Post Meta (Author and Date) with icons, left-aligned under the title
             echo '<div class="post-meta flex justify-start items-center text-gray-600 text-sm gap-4 mt-2" style="padding-left: 0.5rem;">';
@@ -74,8 +74,8 @@ try {
             echo '<div class="mt-4 post-description text-base ' . esc_attr($atts['description_font_family']) . '" style="color:' . esc_attr($atts['description_font_color']) . '; padding-left: 0.5rem;">' . esc_html(wp_trim_words(get_the_excerpt(), 20, '...')) . '</div>';
 
             // Button container
-            echo '<div class="mt-4 p-2">'; // Use mt-auto to push button to the bottom
-            echo '<div class="bg-blue-600 text-white text-xs font-semibold py-2 px-4 hover:bg-green-600 transition-colors duration-300 inline-block">VIEW POST &raquo;</div>';
+            echo '<div class="p-2">';
+            echo '<div class="bg-blue-600 text-white text-xs font-semibold py-1 px-2 hover:bg-green-600 transition-colors duration-300 inline-block">VIEW POST &raquo;</div>';
             echo '</div>'; // End of button container
 
             echo '</div>'; // End of post content (left side)
