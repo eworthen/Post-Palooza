@@ -20,7 +20,7 @@ define( 'KEENADO_POST_PALOOZA_URL_DIR', plugin_dir_url( __FILE__ ) );
 /**********************************************
  * AJAX Handlers
  **********************************************/
-add_action('init', 'keenado_post_palooza_plugin_init'); // initialize plugin
+add_action( 'init', 'keenado_post_palooza_plugin_init' ); // initialize plugin
 add_action( 'admin_menu', 'keenado_post_palooza_plugin_menu' ); // admin dashboard menu
 add_action( 'wp_enqueue_scripts', 'keenado_posts_plugin_enqueue_frontend_scripts' ); // front end css
 add_action( 'admin_enqueue_scripts', 'keenado_posts_plugin_enqueue_admin_scripts' ); // admin dashboard css
