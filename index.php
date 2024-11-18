@@ -26,7 +26,7 @@ add_action( 'wp_enqueue_scripts', 'keenado_posts_plugin_enqueue_frontend_scripts
 add_action( 'admin_enqueue_scripts', 'keenado_posts_plugin_enqueue_admin_scripts' ); // admin dashboard css
 
 // Include the main plugin file
-require_once KEENADO_POST_PALOOZA_PLUGIN_DIR . 'app/keenado_post_palooza_plugin.php';
+require_once KEENADO_POST_PALOOZA_PLUGIN_DIR . 'app/keenado-post-palooza-plugin.php';
 
 // Initialize the plugin
 function keenado_post_palooza_plugin_init() {
