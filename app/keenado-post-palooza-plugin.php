@@ -21,7 +21,7 @@ function keenado_post_palooza_plugin_admin_page() {
         echo '<h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Post Palooza Admin</h3>';
 
          // Include the necessary file
-        include(KEENADO_POST_PALOOZA_PLUGIN_DIR . 'app/includes/admin/cards-config.php');
+        include_once KEENADO_POST_PALOOZA_PLUGIN_DIR . 'app/includes/admin/cards-config.php';
 
         echo '</div>'; // End of transparent container with border
 
