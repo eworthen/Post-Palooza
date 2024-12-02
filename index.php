@@ -31,9 +31,6 @@ require_once KEENADO_POST_PALOOZA_PLUGIN_DIR . 'app/keenado-post-palooza-plugin.
 // Initialize the plugin
 function keenado_post_palooza_plugin_init() {
     // Any initialization or setup logic for your plugin
-    if ( function_exists( 'keenado_events_setup' ) ) {
-        keenado_events_setup(); // Call setup function from keenado_events_plugin.php
-    }
 }
 
 /**********************************************

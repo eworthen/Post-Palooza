@@ -153,7 +153,7 @@ echo '<div class="flex-grow p-5 bg-white border rounded flex flex-col justify-be
     echo '<div class="w-full p-2.5 bg-transparent flex gap-6" style="min-width:680px;">';
 
         // Start the post item with background color from $atts
-        echo '<div class="post-item flex flex-col md:flex-row justify-between items-stretch border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 bg-white w-[700px] h-64 md:h-64 sm:h-[480px]">';
+        echo '<div id="post-item" class="flex flex-col md:flex-row justify-between items-stretch border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 bg-white w-[700px] h-64 md:h-64 sm:h-[480px]">';
 
         // Display Post Thumbnail (Image container with responsive order)
         echo '<div class="w-full md:w-1/3 h-64 relative overflow-hidden bg-gray-200 order-1 md:order-2">'; // Order changes on md screens
@@ -164,10 +164,10 @@ echo '<div class="flex-grow p-5 bg-white border rounded flex flex-col justify-be
         echo '<div class="p-4 flex flex-col justify-start w-full md:w-2/3 order-2 md:order-1">';
 
         // Display Post Category above the title, smaller and in blue
-        echo '<h3 class="post-category font-bold text-blue-600 mb-1" style="padding-left: 0.5rem;">CATEGORY</h3>';
+        echo '<h3 id="post-category" class="font-bold text-blue-600 mb-1" style="padding-left: 0.5rem;">CATEGORY</h3>';
 
         // Display Post Title at the top with larger font size and left padding
-        echo '<h2 class="post-title text-2xl font-bold font-arial" title="Keenado Horizontal Post Grid Demo" style="color:#000000; padding-left: 0.5rem;">Keenado Horizontal Post Grid Demo</h2>';
+        echo '<h2 id="post-title" class="text-2xl font-bold font-arial" title="Keenado Horizontal Post Grid Demo" style="color:#000000; padding-left: 0.5rem;">Keenado Horizontal Post Grid Demo</h2>';
 
         // Post Meta (Author and Date) with icons, left-aligned under the title
         echo '<div class="post-meta flex justify-start items-center text-gray-600 text-sm gap-4 mt-2" style="padding-left: 0.5rem;">';
@@ -191,7 +191,7 @@ echo '<div class="flex-grow p-5 bg-white border rounded flex flex-col justify-be
         echo '</div>'; // End of post-meta section
 
         // Add spacing between the meta section and the description
-        echo '<div class="mt-4 post-description text-base font-arial" style="color:#454545; padding-left: 0.5rem;">Apply styles to the card and copy the shortcode to your page!</div>';
+        echo '<div id="post-description" class="mt-4 text-base font-arial" style="color:#454545; padding-left: 0.5rem;">Apply styles to the card and copy the shortcode to your page!</div>';
 
         // Button container
         echo '<div class="p-2">';
@@ -210,8 +210,8 @@ echo '<div class="flex-grow p-5 bg-white border rounded flex flex-col justify-be
 
                 // Title Font Family Selector
                 echo '<div class="w-full sm:w-1/2">';
-                    echo '<label for="title-font-family" class="block mb-2">Title Font Family:</label>';
-                    echo '<select id="title-font-family" class="p-2 border rounded mb-2 w-full">';
+                    echo '<label for="horz-title-font-family" class="block mb-2">Title Font Family:</label>';
+                    echo '<select id="horz-title-font-family" class="p-2 border rounded mb-2 w-full">';
                         echo '<option value="font-arial">Arial</option>';
                         echo '<option value="font-mono">Monospace</option>';
                         echo '<option value="font-playfair">Playfair Display</option>';
@@ -223,14 +223,14 @@ echo '<div class="flex-grow p-5 bg-white border rounded flex flex-col justify-be
 
                 // Title Font Color Selector
                 echo '<div class="w-full sm:w-1/2">';
-                    echo '<label for="title-font-color" class="block mb-2">Title Font Color:</label>';
-                    echo '<input type="color" id="title-font-color" value="#000000">';
+                    echo '<label for="horz-title-font-color" class="block mb-2">Title Font Color:</label>';
+                    echo '<input type="color" id="horz-title-font-color" value="#000000">';
                 echo '</div>';
 
                 // Description Font Family Selector
                 echo '<div class="w-full sm:w-1/2">';
-                    echo '<label for="description-font-family" class="block mb-2">Description Font Family:</label>';
-                    echo '<select id="description-font-family" class="p-2 border rounded mb-2 w-full">';
+                    echo '<label for="horz-description-font-family" class="block mb-2">Description Font Family:</label>';
+                    echo '<select id="horz-description-font-family" class="p-2 border rounded mb-2 w-full">';
                         echo '<option value="font-arial">Arial</option>';
                         echo '<option value="font-mono">Monospace</option>';
                         echo '<option value="font-playfair">Playfair Display</option>';
@@ -242,8 +242,8 @@ echo '<div class="flex-grow p-5 bg-white border rounded flex flex-col justify-be
 
                 // Description Font Color Selector
                 echo '<div class="w-full sm:w-1/2">';
-                    echo '<label for="description-font-color" class="block mb-2">Description Font Color:</label>';
-                    echo '<input type="color" id="description-font-color" value="#454545">';
+                    echo '<label for="horz-description-font-color" class="block mb-2">Description Font Color:</label>';
+                    echo '<input type="color" id="horz-description-font-color" value="#454545">';
                 echo '</div>';
             echo '</div>'; // End of First Row
 
@@ -252,20 +252,20 @@ echo '<div class="flex-grow p-5 bg-white border rounded flex flex-col justify-be
 
                 // Background Color Selector
                 echo '<div class="w-full">';
-                    echo '<label for="bg-color" class="block mb-2 mt-2">Card Background:</label>';
-                    echo '<input type="color" id="bg-color" value="#FFFFFF">';
+                    echo '<label for="horz-bg-color" class="block mb-2 mt-2">Card Background:</label>';
+                    echo '<input type="color" id="horz-bg-color" value="#FFFFFF">';
                 echo '</div>';
 
                 // Number of Cards Per Page
                 echo '<div class="w-full sm:w-1/2">';
-                    echo '<label for="cards-per-page" class="block mb-2 mt-2">Cards Per Page:</label>';
-                    echo '<input type="number" id="cards-per-page" class="p-2 border rounded mb-2 w-full" value="3">';
+                    echo '<label for="horz-cards-per-page" class="block mb-2 mt-2">Cards Per Page:</label>';
+                    echo '<input type="number" id="horz-cards-per-page" class="p-2 border rounded mb-2 w-full" value="3">';
                 echo '</div>';
 
                 // Post Categories Dropdown
                 echo '<div class="w-full sm:w-1/2">';
-                    echo '<label for="post-category" class="block mb-2">Post Category:</label>';
-                    echo '<select id="post-category" class="p-2 border rounded mb-2 w-full">';
+                    echo '<label for="horz-post-category" class="block mb-2">Post Category:</label>';
+                    echo '<select id="horz-post-category" class="p-2 border rounded mb-2 w-full">';
                         echo '<option value="">All Categories</option>';
                         // Fetching the categories from WordPress
                         $categories = get_categories(array('orderby' => 'name', 'order' => 'ASC'));
@@ -277,14 +277,14 @@ echo '<div class="flex-grow p-5 bg-white border rounded flex flex-col justify-be
             echo '</div>'; // End of Second Row
 
             // Generate Shortcode Button
-            echo '<button id="generate-shortcode" class="bg-blue-600 text-white py-2 px-4 rounded mt-4">Generate Shortcode</button>';
+            echo '<button id="horz-generate-shortcode" class="bg-blue-600 text-white py-2 px-4 rounded mt-4">Generate Shortcode</button>';
             echo '</div>'; // End of Control Section
 
             // Shortcode Section (Column 3) - Smallest column, flexible to take less space
             echo '<div class="w-1/5 p-5 border bg-white">';
                 echo '<label class="block mb-2">Generated Shortcode:</label>';
-                echo '<textarea id="shortcode-output" class="p-2 bg-white border rounded w-full h-[200px]" readonly>[post_palooza_grid_view]</textarea>';
-                echo '<button id="copy-button" class="bg-blue-600 text-white py-2 px-4 rounded mt-4">Copy to clipboard</button>';
+                echo '<textarea id="horz-shortcode-output" class="p-2 bg-white border rounded w-full h-[200px]" readonly>[post_palooza_grid_view]</textarea>';
+                echo '<button id="horz-copy-button" class="bg-blue-600 text-white py-2 px-4 rounded mt-4">Copy to clipboard</button>';
             echo '</div>';
 
         echo '</div>';
@@ -307,14 +307,36 @@ echo '<script>
         document.getElementById("card-preview").style.backgroundColor = document.getElementById("bg-color").value;
     }
 
-    // Add event listeners for live updates
+    function updateHorizontalStyles() {
+        // Update Title
+        document.getElementById("post-title").style.color = document.getElementById("horz-title-font-color").value;
+        document.getElementById("post-title").className = "text-lg font-bold mb-2 " + document.getElementById("horz-title-font-family").value;
+        
+        // Update Description
+        document.getElementById("post-description").style.color = document.getElementById("horz-description-font-color").value;
+        document.getElementById("post-description").className = "text-lg mb-4 " + document.getElementById("horz-description-font-family").value;
+        
+        // Update Background
+        document.getElementById("post-item").style.backgroundColor = document.getElementById("horz-bg-color").value;
+    }
+
+
+
+    // Event listeners for live updates (cards)
     document.getElementById("title-font-family").addEventListener("change", updateCardStyles);
     document.getElementById("title-font-color").addEventListener("change", updateCardStyles);
     document.getElementById("description-font-family").addEventListener("change", updateCardStyles);
     document.getElementById("description-font-color").addEventListener("change", updateCardStyles);
     document.getElementById("bg-color").addEventListener("change", updateCardStyles);
 
-    // Copy shortcode button logic
+    // Event listeners for live updates (horizontal)
+    document.getElementById("horz-title-font-family").addEventListener("change", updateHorizontalStyles);
+    document.getElementById("horz-title-font-color").addEventListener("change", updateHorizontalStyles);
+    document.getElementById("horz-description-font-family").addEventListener("change", updateHorizontalStyles);
+    document.getElementById("horz-description-font-color").addEventListener("change", updateHorizontalStyles);
+    document.getElementById("horz-bg-color").addEventListener("change", updateHorizontalStyles);
+
+    // Copy shortcode button logic (cards)
     document.getElementById("copy-button").addEventListener("click", function() {
         var textarea = document.getElementById("shortcode-output");
         textarea.select();
@@ -323,7 +345,16 @@ echo '<script>
         setTimeout(() => { this.textContent = "Copy to clipboard"; }, 2000);
     });
 
-    // Generate shortcode
+    // Copy shortcode button logic (horizontal)
+    document.getElementById("horz-copy-button").addEventListener("click", function() {
+        var textarea = document.getElementById("horz-shortcode-output");
+        textarea.select();
+        document.execCommand("copy");
+        this.textContent = "Copied!";
+        setTimeout(() => { this.textContent = "Copy to clipboard"; }, 2000);
+    });
+
+    // Generate shortcode (cards)
     document.getElementById("generate-shortcode").addEventListener("click", function() {
         const titleFontFamily = document.getElementById("title-font-family").value;
         const titleFontColor = document.getElementById("title-font-color").value;
@@ -336,6 +367,21 @@ echo '<script>
         let shortcode = `[post_palooza_grid_view title_font_family="${titleFontFamily}" title_font_color="${titleFontColor}" description_font_family="${descriptionFontFamily}" description_font_color="${descriptionFontColor}" bg_color="${bgColor}" posts_per_page="${cardsPerPage}" category="${category}"]`;
 
         document.getElementById("shortcode-output").innerText = shortcode;
+    });
+
+    // Generate shortcode (horizontal)
+    document.getElementById("horz-generate-shortcode").addEventListener("click", function() {
+        const horzTitleFontFamily = document.getElementById("horz-title-font-family").value;
+        const horzTitleFontColor = document.getElementById("horz-title-font-color").value;
+        const horzDescriptionFontFamily = document.getElementById("horz-description-font-family").value;
+        const horzDescriptionFontColor = document.getElementById("horz-description-font-color").value;
+        const horzBgColor = document.getElementById("horz-bg-color").value;
+        const horzCardsPerPage = document.getElementById("horz-cards-per-page").value;
+        const horzCategory = document.getElementById("horz-post-category").value;
+
+        let horzShortcode = `[post_palooza_horizontal_grid_view title_font_family="${horzTitleFontFamily}" title_font_color="${horzTitleFontColor}" description_font_family="${horzDescriptionFontFamily}" description_font_color="${horzDescriptionFontColor}" bg_color="${horzBgColor}" posts_per_page="${horzCardsPerPage}" category="${horzCategory}"]`;
+
+        document.getElementById("horz-shortcode-output").innerText = horzShortcode;
     });
 </script>';
 ?>

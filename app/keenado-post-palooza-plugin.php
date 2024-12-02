@@ -35,8 +35,14 @@ function keenado_post_palooza_plugin_admin_page() {
  * Shortcode to display a post grid with custom post type and number of posts
  **********************************************/
 function keenado_post_grid_shortcode($atts) {
+    // Include the KeenadoPostGrid class
+    require_once KEENADO_POST_PALOOZA_PLUGIN_DIR . 'app/models/KeenadoPostGrid.php';
+
+    // Instantiate the class and call the render method
+    $keenado_post_grid = new KeenadoPostGrid($atts);
+    return $keenado_post_grid->render();
     // Define default attributes and merge with the ones passed through the shortcode
-    $atts = shortcode_atts(
+    /*$atts = shortcode_atts(
         array(
             'title_font_family'     => 'font-arial',   // Default font family for the title
             'title_font_color'      => '#000000',      // Default title font color
@@ -51,7 +57,7 @@ function keenado_post_grid_shortcode($atts) {
     // Include the card layout file and pass $atts to it
     ob_start(); // Start output buffering
     include(KEENADO_POST_PALOOZA_PLUGIN_DIR . 'app/includes/front-end/card-post-grid.php');
-    return ob_get_clean(); // Return the content and clean the buffer
+    return ob_get_clean(); // Return the content and clean the buffer*/
 }
 
 /**********************************************
