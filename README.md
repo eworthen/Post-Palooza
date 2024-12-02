@@ -19,7 +19,7 @@ Keenado Post Palooza is a powerful plugin designed to supercharge your WordPress
 
 == Installation ==
 
-1. Upload the `keenado-post-palooza` folder to the `/wp-content/plugins/` directory.
+1. Upload keenado-post-plugin zip file in the WordPress Plugin page.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
 == Frequently Asked Questions ==
