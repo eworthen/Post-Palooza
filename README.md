@@ -52,10 +52,4 @@ Initial release of Keenado Post Palooza. Upgrade safely for enhanced post manage
 
 This plugin is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or any later version.
 
- K   K  EEEEE  EEEEE  N   N   A   DDDD   OOO
- K  K   E      E      NN  N  A A  D   D O   O
- KKK    EEEE   EEEE   N N N AAAAA D   D O   O
- K  K   E      E      N  NN A   A D   D O   O
- K   K  EEEEE  EEEEE  N   N A   A DDDD   OOO
-
 
