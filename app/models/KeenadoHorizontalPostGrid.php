@@ -1,6 +1,11 @@
 <?php
 
-class KeenadoPostGrid {
+namespace app\models;
+
+use \WP_Query;
+use \Exception;
+
+class KeenadoHorizontalPostGrid {
     private $atts;
 
     public function __construct($atts = []) {

@@ -1,5 +1,10 @@
 <?php
 
+namespace app\models;
+
+use \WP_Query;
+use \Exception;
+
 class KeenadoPostGrid {
     private $atts;
 

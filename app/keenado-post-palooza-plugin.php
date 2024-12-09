@@ -1,4 +1,8 @@
 <?php
+
+use app\models\KeenadoPostGrid;
+use app\models\KeenadoHorizontalPostGrid;
+
 // Ensure the script is being run within WordPress
 if ( !defined( 'ABSPATH' ) ) {
     exit;
@@ -57,7 +61,7 @@ function keenado_horizontal_post_grid_shortcode($atts) {
     require_once KEENADO_POST_PALOOZA_PLUGIN_DIR . 'app/models/KeenadoHorizontalPostGrid.php';
 
     // Instantiate the class and call the render method
-    $keenado_horizontal_post_grid = new KeenadoPostGrid($atts);
+    $keenado_horizontal_post_grid = new KeenadoHorizontalPostGrid($atts);
     return $keenado_horizontal_post_grid->render();
 }
 
