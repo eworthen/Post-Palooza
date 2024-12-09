@@ -45,7 +45,8 @@ class KeenadoPostGrid {
                     $query->the_post();
         
                     // Post item with max-width of 360px and responsive behavior
-                    $output .= '<a href="' . get_the_permalink() . '" class="post-item block border border-gray-200 shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col" style="background-color:' . esc_attr($this->atts['bg_color']) . '; max-width: 360px;">';
+                    $output .= '<div onclick="window.location.href=\'' . esc_url(get_the_permalink()) . '\'" class="post-item block border border-gray-200 shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col" style="background-color:' . esc_attr($this->atts['bg_color']) . '; max-width: 360px; cursor:pointer;">';
+
         
                     // Post Thumbnail
                     if (has_post_thumbnail()) {
@@ -97,7 +98,7 @@ class KeenadoPostGrid {
         
                     $output .= '</div>';
         
-                    $output .= '</a>'; // End of post-item
+                    $output .= '</div>'; // End of post-item
                 }
 
                 // Reset Post Data (Important)
@@ -117,7 +118,7 @@ class KeenadoPostGrid {
         
                 // Display pagination with styling using TailwindCSS
                 if ($pagination) {
-                    $output .= '<div class="pagination mt-8">
+                    $output .= '<div class="pagination mt-8 text-center">
                                 <ul class="flex justify-center space-x-4 text-sm">';
         
                     foreach ($pagination as $page_link) {
@@ -150,6 +151,7 @@ class KeenadoPostGrid {
             $output = '<p>An error occurred: ' . esc_html($e->getMessage()) . '</p>';
         }
 
+        wp_reset_postdata();
         return $output;
     }
 }

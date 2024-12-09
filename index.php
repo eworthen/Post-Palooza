@@ -3,7 +3,7 @@
 Plugin Name: Keenado - Post Palooza
 Description: A plugin to list posts. POST GRID VIEW Shortcode: [post_palooza_grid_view]
 Version: 1.0
-Author: EDUB@Keenado
+Author: eworthen
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
